@@ -71,20 +71,20 @@ const Navbar = () => {
 
         {/* Navbar bottom */}
         <div className="bg-white 
-        lg:p-5 lg:border-b lg:border-solid lg:border-zinc-600">
+        lg:p-5 lg:border-b lg:border-solid lg:border-zinc-600 text-zinc-900">
             {
                 viewNavMenu &&
                 <ul className="py-2 px-5 text-zinc-900 text-sm flex flex-col gap-y-5 
                 lg:flex-row lg:justify-center lg:gap-x-10 lg:font-semibold lg:text-base">
-                <li><NavLink to="/health">Health</NavLink></li>
-                <li><NavLink to="/sports">Sports</NavLink></li>
-                <li><NavLink to="/politics">Politics</NavLink></li>
-                <li><NavLink to="/business">Business</NavLink></li>
-                <li><NavLink to="/arts">Arts</NavLink></li>
-                <li><NavLink to="/science">Science</NavLink></li>
-                <li><NavLink to="/world">World</NavLink></li>
-                <li><NavLink to="/about">About</NavLink></li>
-                <li><NavLink to="/contact">Contact</NavLink></li>
+                <li><NavLink to="/health" className={ ( { isActive } ) => isActive ? "text-red-700" : "text-zinc-900"}> Health </NavLink></li>
+                <li><NavLink to="/sports" className={ ( { isActive } ) => isActive ? "text-red-700" : "text-zinc-900"}> Sports </NavLink></li>
+                <li><NavLink to="/politics" className={ ( { isActive } ) => isActive ? "text-red-700" : "text-zinc-900"}> Politics </NavLink></li>
+                <li><NavLink to="/business" className={ ( { isActive } ) => isActive ? "text-red-700" : "text-zinc-900"}> Business </NavLink></li>
+                <li><NavLink to="/arts" className={ ( { isActive } ) => isActive ? "text-red-700" : "text-zinc-900"}> Arts </NavLink></li>
+                <li><NavLink to="/science" className={ ( { isActive } ) => isActive ? "text-red-700" : "text-zinc-900"}> Science </NavLink></li>
+                <li><NavLink to="/world" className={ ( { isActive } ) => isActive ? "text-red-700" : "text-zinc-900"} >World </NavLink></li>
+                <li><NavLink to="/about" className={ ( { isActive } ) => isActive ? "text-red-700" : "text-zinc-900"}> About </NavLink></li>
+                <li><NavLink to="/contact" className={ ( { isActive } ) => isActive ? "text-red-700" : "text-zinc-900"}> Contact </NavLink></li>
             </ul>
             }
         </div>

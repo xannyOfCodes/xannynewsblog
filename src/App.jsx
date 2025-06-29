@@ -12,12 +12,13 @@ import About from "./pages/About"
 import Contact from "./pages/Contact"
 
 
+
 const App = () => {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout/>}>
-        <Route index element={<Home/>}/>
+        <Route index element={<Home/>} />
         <Route path="/health" element={<Health/>}/>
         <Route path="/sports" element={<Sports/>}/>
         <Route path="/politics" element={<Politics/>}/>
