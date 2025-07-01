@@ -25,9 +25,13 @@ const HomeHealth = () => {
 export default HomeHealth
 
 
+
+
+// component used to fetch data into the props
 export const HomeHealthData = () => {
     const [healthData, setHealthData] = useState();
     console.log(healthData)
+    // console.log(healthData)
     
 
     useEffect(() => {
@@ -47,23 +51,65 @@ export const HomeHealthData = () => {
 
     return(
         <div>
-            { healthData ?
-                    healthData.map((items) => {
-                        <div key={items.source.id} >
-                                    <img src={items.urlToImage} alt="" />
-                                    <div>
-                                        <p>{items.title}</p>
-                                        <span className="inline-block mt-2 text-gray-400 text-sm">
-                                        { new Date(items.publishedAt). toLocaleDateString("en-US", {
-                                        year: "numeric",
-                                        month: "long",
-                                        day: "numeric"
-                                        }) }</span>
-                                    </div>
-                        </div>
-                     })
-                : <div className="w-[100] h-[15rem] m-[1rem] bg-gray-200 text-xl text-white flex items-center justify-center"> </div>}
+            { healthData ? 
+            <div>
+                <HomeHealthCont 
+            img={healthData[0].urlToImage}
+            cat="HEAlth"
+            title={healthData[0].title}
+            date={new Date(healthData[0].publishedAt). toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric"
+                        })}
+            />
+            <HomeHealthCont 
+            img={healthData[1].urlToImage}
+            cat="HEAlth"
+            title={healthData[1].title}
+            date={new Date(healthData[1].publishedAt). toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric"
+                        })}
+            />
+            <HomeHealthCont 
+            img={healthData[2].urlToImage}
+            cat="HEAlth"
+            title={healthData[2].title}
+            date={new Date(healthData[2].publishedAt). toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric"
+                        })}
+            />
+            <HomeHealthCont 
+            img={healthData[3].urlToImage}
+            cat="HEAlth"
+            title={healthData[3].title}
+            date={new Date(healthData[3].publishedAt). toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric"
+                        })}
+            />
+            </div> : <div className="w-[100] h-[15rem] m-[1rem] bg-gray-200 text-xl text-white flex items-center justify-center"> </div>}
         </div> 
     )
 }
 
+
+
+// component for content structure using props
+export const HomeHealthCont = ({img, cat, title, date}) => {
+    return(
+        <div className="p-[1.5rem]">
+            <img src={img} alt="img" className="w-full" />
+            <div className="mt-5">
+                <Link to={{pathname:"/health"}}><span className="text-red-400 text-sm font-semibold uppercase">{cat}</span></Link>
+                <p className="mt-2 text-sm font-semibold text-zinc-900s">{title}</p>
+                <p className="mt-2 text-sm text-gray-500">{date}</p>
+            </div>
+        </div>
+    )
+}

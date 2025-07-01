@@ -46,13 +46,13 @@ export const HomeHeroSports = () => {
     return(
         sportsData?.articles ? <div className="p-[1rem]">
                 <div style={{ backgroundImage: `url(${bgImg})`}}
-                className="h-[15rem] w-full bg-center bg-no-repeat bg-size-[125%]
+                className="h-[20rem] w-full bg-center bg-no-repeat bg-size-[180%]
                 lg:h-[35rem] lg:bg-size-[200%]">
                     <div className="bg-[rgb(0,0,0,0.4)] w-full h-full p-[1rem]
                     lg:flex lg:flex-col lg:justify-end lg:px-5">
-                        <span className="bg-red-700 text-white py-1 px-3 text-sm font-semibold inline-block mt-15
+                        <span className="bg-red-700 text-white py-1 px-3 text-sm font-semibold inline-block mt-30
                         lg:w-[16%]">SPORTS</span>
-                        <p className="text-white text-xl font-semibold mt-2
+                        <p className="text-white text-base font-semibold mt-2
                         lg:text-2xl">
                             { sportsData?.articles[0]?.title }
                         </p>
@@ -96,10 +96,10 @@ export const HomeHeroPolitics = () => {
                 lg:gap-x-5">
                         <img className="w-[10rem] h-[15rem] object-cover
                         lg:w-[13rem] lg:h-[18rem]"
-                        src={politicsData?.articles[0]?.urlToImage} alt="" />
+                        src={politicsData?.articles[0]?.urlToImage} alt="img" />
                         <div>
                             <span className="bg-red-700 text-white py-1 px-3 text-sm font-semibold">POLITICS</span>
-                            <p className="mt-2 text-lg font-semibold text-zinc-800
+                            <p className="mt-2 text-base font-semibold text-zinc-800
                             lg:text-xl">
                                 { politicsData?.articles[0]?.title }
                             </p>
@@ -144,10 +144,10 @@ export const HomeHeroHealth = () => {
                     lg:gap-x-5">
                         <img className="w-[10rem] h-[15rem] object-cover
                         lg:w-[13rem] lg:h-[18rem]r"
-                        src={healthData?.articles[0]?.urlToImage} alt="" />
+                        src={healthData?.articles[0]?.urlToImage} alt="img" />
                         <div>
                                 <span className="bg-red-700 text-white py-1 px-3 text-sm font-semibold">HEALTH</span>
-                                <p className="mt-2 text-lg font-semibold text-zinc-800
+                                <p className="mt-2 text-base font-semibold text-zinc-800
                                 lg:text-xl">
                                     { healthData?.articles[0]?.title }
                                 </p>
